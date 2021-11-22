@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand" href="./">
+    <img
+      src="https://images-ext-2.discordapp.net/external/S2jy_ra8noQjcWl_SJF1wENd4J4m_FsNuNAuYrpejIE/https/cdn-icons-png.flaticon.com/512/172/172835.png?width=330&height=330"
+      width="40"
+      height="40"
+      alt=""
+    />
+  
+  </a>
+  <div class="form-inline">
+    <form action="/search/?offset=0" method="GET">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        name="keyword"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+
+  <% if(locals.user){ %>
+  <a class="btn btn-danger my-2" href="/cart"> Cart </a>
+  <% } else{ %>
+  <a class="btn btn-danger my-2" href="/auth/login"> Log In </a>
+  <% } %>
+</nav>

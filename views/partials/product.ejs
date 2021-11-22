@@ -1,0 +1,37 @@
+<div class="item py-2">
+  <div class="product font-rale">
+    <a href="<%= `/product/${product._id}` %>">
+      <img
+        src="<%= `/assets/products/${product.image_id}.png` %>"
+        alt="product1"
+        class="img-fluid"
+    /></a>
+    <div class="text-center">
+      <h6><%= product.name %></h6>
+      <div class="rating text-warning font-size-12">
+        <span><i class="fas fa-star"></i></span>
+        <span><i class="fas fa-star"></i></span>
+        <span><i class="fas fa-star"></i></span>
+        <span><i class="fas fa-star"></i></span>
+        <span><i class="far fa-star"></i></span>
+      </div>
+      <div class="price py-2">
+        <span>₹<%= product.price %>/-</span>
+      </div>
+
+      <% if(locals.user){ %>
+      <button
+        type="submit"
+        class="btn btn-warning font-size-12"
+        onclick="addToCart('<%= product.id %>')"
+      >
+        Add to Cart
+      </button>
+      <% } else{ %>
+      <a class="btn btn-warning font-size-12" href="/auth/login">
+        Add to Cart
+      </a>
+      <% } %>
+    </div>
+  </div>
+</div>
