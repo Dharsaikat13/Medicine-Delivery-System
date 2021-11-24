@@ -1,5 +1,5 @@
 {
-  "name": "simple-ecommerce",
+  "name": "Medicine Delivery system",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "Ayan Chakraborty",
+  "author": "Saikat dhar",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
